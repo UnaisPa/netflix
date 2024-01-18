@@ -1,0 +1,66 @@
+.image-hover {
+    position: relative;
+    display: inline-block; /* Ensures proper positioning */
+  }
+  
+  .image-hover img {
+    transition: opacity 0.3s ease-in-out; /* Smoother darkening effect */
+  }
+  
+  .image-hover .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* Adjust text styles as needed */
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .image-hover:hover img {
+    opacity: 0.6; /* Adjust darkness as desired */
+  }
+
+  .overlay-icon{
+    position: absolute;
+    top: 16%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* Adjust text styles as needed */
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+  .image-hover:hover .overlay-icon{
+    visibility: visible;
+    opacity: 1;
+  }
+  .image-hover:hover .overlay-text{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.poster{
+    cursor: pointer;
+    max-width: 290px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+.small-poster{
+    cursor: pointer;
+    max-width: 200px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}

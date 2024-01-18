@@ -1,0 +1,79 @@
+.rowcards{
+    padding-left: 10px;
+    bottom: 5px;
+    margin-top: 100px;
+}
+.small-rowcards{
+    padding-left: 10px;
+    padding-top: 40px;
+}
+.rowcard{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+}
+.poster{
+    cursor: pointer;
+    max-width: 290px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+.small-poster{
+    cursor: pointer;
+    max-width: 200px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rowcard::-webkit-scrollbar{
+    display: none;
+}
+
+.poster:hover,.small-poster:hover{
+    transform: scale(1.1);
+}
+
+.video-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .video-modal {
+    position: relative;
+    background: #00000000;
+    width: 800px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (max-width:800px) {
+    .video-modal{
+        width: 550px;
+        height: 290px;
+    }
+  }
+  @media screen and (max-width:600px) {
+    .video-modal{
+        width: 350px;
+        height: 190px;
+    }
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+  }

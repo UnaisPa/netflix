@@ -1,11 +1,11 @@
 .navbar{
     display: flex;
     position: fixed;
-    background-color: #111;
+    background-color: #111111cb;
     width: 100%;
     height: 60px;
-    font-family: 'Roboto', sans-serif
-    
+    font-family: 'Roboto', sans-serif;
+    z-index: 2;
 }
 .logo{
     width: 100px;
@@ -18,12 +18,41 @@
     border-radius: 3px;
 
 }
+.signIn{
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+    color:white
+}
+.signUp button{
+    text-decoration: none; 
+    padding: 3px; 
+    padding-left: 13px;
+    padding-right: 13px;
+    color: white;
+    background-color: red;
+    border-radius: 2px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif
+}
+.signIn:hover{
+    color: rgb(228, 228, 228);
+}
+.signUp button:hover{
+    background-color: rgba(234, 0, 0, 0.95);
+}
 .nav-element{
+    text-align: center;
     color: rgb(191, 196, 199);
     font-size: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    margin-right: 13px;
 }
-.nav-element:hover{
+.nav-element:hover,.nav-element.active{
     color: white;
+    font-weight: bold;
 }
 
 @media ( max-width:850px) {
@@ -35,7 +64,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(101, 95, 95, 0.696)
+        background-color: rgba(55, 55, 55, 0.719)
         
     }
     .nav-element:hover{

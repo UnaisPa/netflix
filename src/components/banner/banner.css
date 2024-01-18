@@ -1,9 +1,39 @@
 .banner{
     /* background-image: url('https://wallpaperaccess.com/full/645154.jpg'); */
     
-    background-image: url('https://th.bing.com/th/id/R.485f2cfdcfa8c9147119209c67e1b20d?rik=DRgsDxQbEqFLgA&riu=http%3a%2f%2fhdqwalls.com%2fwallpapers%2fspiderman-homecoming-movie-poster-c1.jpg&ehk=J8pikAaRAfe%2fXnMt9F4YEd6gHq3GZgEePa0WEClzBIA%3d&risl=&pid=ImgRaw&r=0');
+    /* background-image: url('https://th.bing.com/th/id/R.485f2cfdcfa8c9147119209c67e1b20d?rik=DRgsDxQbEqFLgA&riu=http%3a%2f%2fhdqwalls.com%2fwallpapers%2fspiderman-homecoming-movie-poster-c1.jpg&ehk=J8pikAaRAfe%2fXnMt9F4YEd6gHq3GZgEePa0WEClzBIA%3d&risl=&pid=ImgRaw&r=0'); */
     background-size: cover;
     color: white;
-    height: 100vh;
+    min-height: 100vh;
     border-image: fill 0 linear-gradient(#0003,#000);
+    font-family: 'Roboto', sans-serif
+}
+.movie-items{
+    margin-left: 6.7%;
+    padding-top: 160px;
+}
+.movie-items h1{
+    font-size: 57px;
+    font-weight: 700;
+}
+.movie-items p{
+    max-width: 600px;
+    opacity: 90%;
+}
+.buttons :nth-child(1){
+    background-color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    color: black;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+}
+.buttons :nth-child(2){
+    background-color: rgba(215, 215, 215, 0.363);
+    border-radius: 4px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    outline: none;
 }

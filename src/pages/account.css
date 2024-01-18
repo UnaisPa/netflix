@@ -1,0 +1,21 @@
+.account{
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/594f8025-139a-4a35-b58d-4ecf8fdc507c/d3c4e455-f0bf-4003-b7cd-511dda6da82a/IN-en-20240108-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-size: cover;
+    height: 56vh;
+}
+.inner{
+    height: 56vh;
+    width: 100%;
+    background:rgba(0, 0, 0, 0.541)
+}
+.inner h2{
+    color: white;
+    padding: 90px;
+    padding-top: 140px;
+    font-weight: bold;
+}
+.saved-div{
+    background-color: #111;
+    min-height: 44vh;
+    padding: 50px;
+}

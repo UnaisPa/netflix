@@ -1,0 +1,13 @@
+.modelBody{
+    background-size: cover;
+    width: 100%;
+    border-image: fill 0 linear-gradient(#0003,#000);
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+    color: white;
+    padding-top: 140px;
+}
+.modelBody p{
+    line-height: 20px;
+    font-size: medium;
+}

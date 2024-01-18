@@ -1,28 +1,52 @@
-import React from "react";
+import React ,{useState} from "react";
 import "./navbar.css";
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import {Link,useNavigate} from 'react-router-dom'
+import { UserAuth } from "../../context/AuthContext";
+
 const NavBar = () => {
+  const {user,logOut} = UserAuth()
+  const navigate = useNavigate()
+  const [isActive,setIsActive]=useState('home')
+
+  const handleLogut = async()=>{
+    try{
+      await logOut();
+      navigate('/')
+    }catch(err){
+      console.log(err)
+    }
+  }
   return (
     <div className="">
       <Navbar expand="lg" className="navbar">
         <Container>
-          <Navbar.Brand href="#home"><img
+          <Link to='/' onClick={()=>setIsActive('home')} ><img
           className="logo"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
           alt=""
-        /></Navbar.Brand>
+        /></Link>
           
           <Navbar.Toggle style={{color:"#111"}} ><i style={{color:"white"}} className="fa-solid fa-bars"></i></Navbar.Toggle>
           <Navbar.Collapse  id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link  className="nav-element" href="#home">Home</Nav.Link>
-              <Nav.Link className="nav-element" href="#link">TV</Nav.Link>
-              <Nav.Link className="nav-element" href="#link">Movies</Nav.Link>
-              <Nav.Link className="nav-element" href="#link">My List</Nav.Link>
-
+              <Link to='/' onClick={()=>setIsActive('home')} className={isActive=='home'?"active nav-element":"nav-element"} >Home</Link>
+              <Link to='/TV' onClick={()=>setIsActive('tv')} className={isActive=='tv'?"active nav-element":"nav-element"} >TV</Link>
+              <Link to='/movies' onClick={()=>setIsActive('movies')} className={isActive=='movies'?"active nav-element":"nav-element"} >Movies</Link>
+              <Link to='/account' onClick={()=>setIsActive('mylist')} className={isActive=='mylist'?"active nav-element":"nav-element"} >My Lists</Link>
             </Nav>
-            <img className="img-fluid avatar" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="img" />
-
+            {
+              user?.email?
+              <>
+                <Link onClick={()=>setIsActive('signin')} to='/account' className="signIn" >Account</Link>
+                <Link onClick={handleLogut} className="signUp" ><button>Log Out</button></Link>
+              </>:
+              <>
+                <Link onClick={()=>setIsActive('signin')} to='/signin' className="signIn" >Sign In</Link>
+                <Link onClick={()=>setIsActive('signup')} to='/signup' className="signUp" ><button>Sign Up</button></Link>
+              </>
+            }
+           
           </Navbar.Collapse>
         </Container>
       </Navbar>
